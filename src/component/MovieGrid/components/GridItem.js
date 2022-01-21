@@ -13,7 +13,7 @@ const Row = ({ data = [], lastElementRef }) => {
                         >
                             <img
                                 alt="poster"
-                                src={`/images/${item["poster-image"]}`} />
+                                src={`images/${item["poster-image"]}`} />
                             <span>{item.name}</span>
                         </div>
                     )
@@ -24,7 +24,7 @@ const Row = ({ data = [], lastElementRef }) => {
                         >
                             <img
                                 alt="poster"
-                                src={`/images/${item["poster-image"]}`} />
+                                src={`images/${item["poster-image"]}`} />
                             <span>{item.name}</span>
                         </div>
                     )
