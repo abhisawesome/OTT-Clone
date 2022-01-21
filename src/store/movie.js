@@ -15,7 +15,16 @@ const reducer = (state = initialState, action) => {
         }
         case 'add_movie_data': {
             const { title } = action.payload;
+            // To store the entire movie list that is loaded in-case of backup
             const currentMovieList = state.data[title] ? state.data[title] : []
+            // Total movie loaded on the page
+            const totalMoviesLoaded = action.payload['page-size-returned']
+                ? (state.totalMoviesLoaded + parseInt(action.payload['page-size-returned']))
+                : state.totalMoviesLoaded
+            // Total available movie for pagination , From API
+            const totalAvailableMovies = action.payload['total-content-items']
+                ? parseInt(action.payload['total-content-items'])
+                : state.totalAvailableMovies;
             return {
                 ...state,
                 currentPage: action.payload,
@@ -27,8 +36,8 @@ const reducer = (state = initialState, action) => {
                     ...state.data,
                     [title]: currentMovieList.concat(action.payload['content-items'].content)
                 },
-                totalMoviesLoaded: action.payload['page-size-returned'] ? parseInt(action.payload['page-size-returned']) : state.totalMoviesLoaded,
-                totalAvailableMovies: action.payload['total-content-items'] ? parseInt(action.payload['total-content-items']) : state.totalAvailableMovies,
+                totalMoviesLoaded: totalMoviesLoaded,
+                totalAvailableMovies: totalAvailableMovies,
                 isLoading: false
             }
         }
@@ -40,6 +49,7 @@ const reducer = (state = initialState, action) => {
             } = state;
             const currentPageName = currentPage.title
             const regularExpression = new RegExp(`/^${movieName}/`, 'i');
+            // search the movie in data using filter and regex
             let data = {
                 ...state.data,
                 [currentPageName]: movieListFull[currentPageName]
@@ -51,13 +61,14 @@ const reducer = (state = initialState, action) => {
                         currentMovieList.name.toLowerCase().search(movieName.toLowerCase()) !== -1
                     )
             };
+             // if the search input value comes empty then reset the data to original
             if (movieName.length === 0) {
                 data = {
                     ...state.data,
                     [currentPageName]: state.movieListFull[currentPageName]
                 };
             }
-           
+
             return { ...state, data };
         }
         default:
