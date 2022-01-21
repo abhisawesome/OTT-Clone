@@ -33,7 +33,8 @@ const Header = () => {
             <div >
                 <input
                     className="text-black"
-                    type="text" placeholder="Search movie.." className='text-black' onChange={(event) => {
+                    type="text" placeholder="Search movie.."
+                    onChange={(event) => {
                         searchFilim(event.target.value);
                     }}
                 />

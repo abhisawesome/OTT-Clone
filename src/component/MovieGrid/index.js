@@ -1,4 +1,4 @@
-import React, { memo, useCallback, lazy, useRef, useState, Suspense } from 'react';
+import React, { memo, useCallback, lazy, useRef, useState } from 'react';
 import hooks from '../../hooks';
 import utils from '../../utils';
 
@@ -10,7 +10,6 @@ const MovieGrid = ({ title = 'Romantic Comedy' }) => {
     const [state] = hooks.fetchMovie(pageNumber, title);
     utils.log('MovieGrid Rendered', { title });
     const { isLoading,
-        currentPage,
         data = {},
         totalMoviesLoaded,
         totalAvailableMovies } = state;
@@ -29,10 +28,10 @@ const MovieGrid = ({ title = 'Romantic Comedy' }) => {
             }
         })
         if (node) observer.current.observe(node)
-    }, [isLoading, totalMoviesLoaded])
+    }, [isLoading,hasMore])
     return (
-        <div>
-            <div>
+        <div >
+            <div className='scrollbar-hide'>
                 <GridItem data={data[title]} lastElementRef={pageEndingRef} />
             </div>
             {isLoading && (

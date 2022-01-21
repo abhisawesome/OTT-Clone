@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import Page1 from '../../src/api/CONTENTLISTINGPAGE-PAGE1.json';
 import Page2 from '../../src/api/CONTENTLISTINGPAGE-PAGE2.json';
