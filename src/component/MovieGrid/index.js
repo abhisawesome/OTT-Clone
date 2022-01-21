@@ -1,25 +1,45 @@
-import React, { memo,useEffect,useRef } from 'react';
+import React, { memo, useCallback, lazy, useRef, useState, Suspense } from 'react';
 import hooks from '../../hooks';
-import GridItem from './components/GridItem';
 import utils from '../../utils';
-import Loader from '../Loader';
-const MovieGrid = ({ title = 'Romantic Comedy', pageNumber = 1 }) => {
+
+const GridItem = lazy(() => import('./components/GridItem'));
+const Loader = lazy(() => import('../Loader'));
+
+const MovieGrid = ({ title = 'Romantic Comedy' }) => {
+    const [pageNumber, setPageNumber] = useState(1)
     const [state] = hooks.fetchMovie(pageNumber, title);
     utils.log('MovieGrid Rendered', { title });
-    const { isLoading, currentPage, data = {} } = state;
-    const pageEndingRef = useRef(null);
-   
-    return (<div>
-        {isLoading && (
-            <Loader />
-        )}
-        {!isLoading && (
+    const { isLoading,
+        currentPage,
+        data = {},
+        totalMoviesLoaded,
+        totalAvailableMovies } = state;
+    const observer = useRef();
+    // To check if there is more element to load
+    const hasMore = totalMoviesLoaded < totalAvailableMovies;
+    // To check if the last element and load
+    const pageEndingRef = useCallback(node => {
+        if (isLoading) {
+            return;
+        }
+        if (observer.current) observer.current.disconnect()
+        observer.current = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting && hasMore) {
+                setPageNumber(prevPageNumber => prevPageNumber + 1)
+            }
+        })
+        if (node) observer.current.observe(node)
+    }, [isLoading, totalMoviesLoaded])
+    return (
+        <div>
             <div>
-                <GridItem data={data[title]} />
-                <div ref={pageEndingRef}/>
+                <GridItem data={data[title]} lastElementRef={pageEndingRef} />
             </div>
-        )}
-    </div>)
+            {isLoading && (
+                <Loader />
+            )}
+        </div>
+    )
 }
 
 export default memo(MovieGrid);

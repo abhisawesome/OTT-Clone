@@ -8,7 +8,9 @@ import { useSelector, useDispatch } from 'react-redux';
  * 
  * @param {Number} pageNumRequest 
  * @param {String} title 
- * @returns 
+ * @returns state from movie-store(redux)
+ * 
+ * @description This custom hook is used to fetch the movie data from the api.
  */
 const FetchMovie = (pageNumRequest = 1, title) => {
     const state = useSelector(state => state.movie);
@@ -22,14 +24,14 @@ const FetchMovie = (pageNumRequest = 1, title) => {
                         type: 'add_movie_data',
                         payload: Page2.page
                     })
-                } else {
+                } else if (pageNumRequest === 3) {
                     dispatch({
                         type: 'add_movie_data',
                         payload: Page3.page
                     })
                 }
                 resolve()
-            }, 5000)
+            }, 2000)
         });
     }
     useEffect(() => {
