@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "https://abhisawesome.github.io/OTT-Clone/static/css/main.e55e5d9d.css",
-    "main.js": "https://abhisawesome.github.io/OTT-Clone/static/js/main.d5945cff.js",
-    "static/js/103.259dc425.chunk.js": "https://abhisawesome.github.io/OTT-Clone/static/js/103.259dc425.chunk.js",
+    "main.css": "https://abhisawesome.github.io/OTT-Clone/static/css/main.036ae078.css",
+    "main.js": "https://abhisawesome.github.io/OTT-Clone/static/js/main.d0cf044f.js",
+    "static/js/103.c40c9d97.chunk.js": "https://abhisawesome.github.io/OTT-Clone/static/js/103.c40c9d97.chunk.js",
     "static/js/787.89d07e5c.chunk.js": "https://abhisawesome.github.io/OTT-Clone/static/js/787.89d07e5c.chunk.js",
     "static/js/673.ca8d84db.chunk.js": "https://abhisawesome.github.io/OTT-Clone/static/js/673.ca8d84db.chunk.js",
     "index.html": "https://abhisawesome.github.io/OTT-Clone/index.html",
-    "main.e55e5d9d.css.map": "https://abhisawesome.github.io/OTT-Clone/static/css/main.e55e5d9d.css.map",
-    "main.d5945cff.js.map": "https://abhisawesome.github.io/OTT-Clone/static/js/main.d5945cff.js.map",
-    "103.259dc425.chunk.js.map": "https://abhisawesome.github.io/OTT-Clone/static/js/103.259dc425.chunk.js.map",
+    "main.036ae078.css.map": "https://abhisawesome.github.io/OTT-Clone/static/css/main.036ae078.css.map",
+    "main.d0cf044f.js.map": "https://abhisawesome.github.io/OTT-Clone/static/js/main.d0cf044f.js.map",
+    "103.c40c9d97.chunk.js.map": "https://abhisawesome.github.io/OTT-Clone/static/js/103.c40c9d97.chunk.js.map",
     "787.89d07e5c.chunk.js.map": "https://abhisawesome.github.io/OTT-Clone/static/js/787.89d07e5c.chunk.js.map",
     "673.ca8d84db.chunk.js.map": "https://abhisawesome.github.io/OTT-Clone/static/js/673.ca8d84db.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e55e5d9d.css",
-    "static/js/main.d5945cff.js"
+    "static/css/main.036ae078.css",
+    "static/js/main.d0cf044f.js"
   ]
 }
