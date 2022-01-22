@@ -1,7 +1,7 @@
 import * as React from 'react'
 import renderer from 'react-test-renderer';
 import Header from '../index';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import {configure,shallow} from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 

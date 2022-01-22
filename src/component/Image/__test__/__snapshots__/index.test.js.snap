@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image block Snapshot testing 1`] = `
+<img
+  alt="alternative"
+  className="new-class"
+  onError={[Function]}
+  src="src/image.jpg"
+/>
+`;
