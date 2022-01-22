@@ -2,7 +2,7 @@
   "name": "OTT-Clone",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://abhisawesome.github.io/OTT-Clone",
+  "homepage": ".",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@reduxjs/toolkit": "^1.7.1",
@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "PUBLIC_URL=https://abhisawesome.github.io/OTT-Clone/ craco build",
     "test": "craco test",
     "eject": "craco eject",
     "predeploy": "npm run build",
