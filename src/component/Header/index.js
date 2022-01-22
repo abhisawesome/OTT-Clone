@@ -44,5 +44,7 @@ const Header = () => {
         </div>
     )
 }
-
+Header.propTypes = {
+    
+}
 export default memo(Header);

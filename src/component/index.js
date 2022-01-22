@@ -3,6 +3,7 @@ import utils from '../utils';
 import MovieGrid from "./MovieGrid";
 import { Suspense } from "react";
 import Loader from "./Loader";
+
 const Components = () => {
     utils.log('Components rendered !');
     return (
@@ -18,4 +19,8 @@ const Components = () => {
     )
 }
 
+
+Components.prototype={
+    
+}
 export default Components

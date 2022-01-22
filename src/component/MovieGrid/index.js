@@ -1,7 +1,7 @@
 import React, { memo, useCallback, lazy, useRef, useState } from 'react';
 import hooks from '../../hooks';
 import utils from '../../utils';
-
+import PropTypes from 'prop-types';
 const GridItem = lazy(() => import('./components/GridItem'));
 const Loader = lazy(() => import('../Loader'));
 
@@ -39,6 +39,10 @@ const MovieGrid = ({ title = 'Romantic Comedy' }) => {
             )}
         </div>
     )
+}
+
+MovieGrid.propTypes = {
+    title: PropTypes.string,
 }
 
 export default memo(MovieGrid);

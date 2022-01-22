@@ -8,7 +8,7 @@ const App = (WrapComponent) => {
   return () => {
     return (
       <Provider store={store}>
-        <div className="bg-black h-full w-full scrollbar-hide">
+        <div className="bg-black h-full w-full scrollbar-hide font-titillium">
           <WrapComponent />
         </div>
       </Provider>

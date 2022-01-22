@@ -1,3 +1,12 @@
+import PropType from 'prop-types';
+
+/**
+ * 
+ * @param {Object} Props 
+ * @returns 
+ * 
+ * @description Loading custom component
+ */
 const Loader = ({ times = 9 }) => {
     const newArray = new Array(times).fill(0);
 
@@ -23,6 +32,10 @@ const Loader = ({ times = 9 }) => {
             })}
         </div>
     )
+}
+
+Loader.propTypes = {
+    times: PropType.number
 }
 
 export default Loader;

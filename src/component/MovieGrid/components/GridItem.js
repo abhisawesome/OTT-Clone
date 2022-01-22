@@ -1,9 +1,13 @@
-import { memo } from "react";
+import { memo,lazy } from "react";
 import utils from "../../../utils";
+import PropType from 'prop-types';
+
+
+const Image = lazy(() => import("../../Image"));
 const Row = ({ data = [], lastElementRef }) => {
-    utils.log('Row rendered !');
+    utils.log('Row rendered !');    
     return (
-        <div className="grid sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-x-[30px] gap-y-[90px] mx-[30px] ">
+        <div className="grid sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-x-[30px] gap-y-[90px] mx-[30px]">
             {data.map((item, index) => {
                 if ((data.length - 10) === index + 1) {
                     return (
@@ -11,9 +15,14 @@ const Row = ({ data = [], lastElementRef }) => {
                             ref={lastElementRef}
                             key={index}
                         >
-                            <img
+                            {/* <img
                                 alt="poster"
-                                src={`images/${item["poster-image"]}`} />
+                                src={`images/${item["poster-image"]}`}
+                            /> */}
+                            <Image
+                                alt=""
+                                src={`images/${item["poster-image"]}`}
+                            />
                             <p
                                 className="line-clamp-1 mt-[24px]"
                             >
@@ -25,11 +34,14 @@ const Row = ({ data = [], lastElementRef }) => {
                     return (
                         <div
                             key={index}
-                            className=""
                         >
-                            <img
+                            {/* <img
                                 alt="poster"
-                                src={`images/${item["poster-image"]}`} />
+                                src={`images/${item["poster-image"]}`} /> */}
+                            <Image
+                                alt=""
+                                src={`images/${item["poster-image"]}`}
+                            />
                             <p
                                 className="line-clamp-1 mt-[24px]"
                             >{item.name}
@@ -44,4 +56,8 @@ const Row = ({ data = [], lastElementRef }) => {
     )
 }
 
+Row.propTypes = {
+    data: PropType.array,
+    lastElementRef: PropType.any,
+}
 export default memo(Row);
