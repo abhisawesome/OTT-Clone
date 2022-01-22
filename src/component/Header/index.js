@@ -16,7 +16,7 @@ const Header = () => {
     }
     return (
         //bg-[url('/images/nav_bar.png')]
-        <div className="flex items-center justify-between p-4 ">
+        <div className="flex items-center justify-between p-4  w-full bg-black top-0 h-[192] pb-[30px] ">
             <div>
                 <img
                     alt='logo'

@@ -3,9 +3,9 @@ import utils from "../../../utils";
 const Row = ({ data = [], lastElementRef }) => {
     utils.log('Row rendered !');
     return (
-        <div className="grid sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-4 p-4 ">
+        <div className="grid sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-x-[30px] gap-y-[90px] mx-[30px] ">
             {data.map((item, index) => {
-                if(data.length === index + 1) {
+                if (data.length === index + 1) {
                     return (
                         <div
                             ref={lastElementRef}
@@ -14,26 +14,30 @@ const Row = ({ data = [], lastElementRef }) => {
                             <img
                                 alt="poster"
                                 src={`images/${item["poster-image"]}`} />
-                            <span
-                            className="line-clamp-1"
-                            >{item.name}</span>
+                            <p
+                                className="line-clamp-1 mt-[24px]"
+                            >
+                                {item.name}
+                            </p>
                         </div>
                     )
-                }else{
+                } else {
                     return (
                         <div
                             key={index}
+                            className=""
                         >
                             <img
                                 alt="poster"
                                 src={`images/${item["poster-image"]}`} />
-                            <span
-                            className="line-clamp-1"
-                            >{item.name}</span>
+                            <p
+                                className="line-clamp-1 mt-[24px]"
+                            >{item.name}
+                            </p>
                         </div>
                     )
                 }
-               
+
             })}
         </div>
 
