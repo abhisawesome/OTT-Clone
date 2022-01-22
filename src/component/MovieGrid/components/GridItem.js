@@ -21,7 +21,7 @@ const Row = ({ data = [], lastElementRef }) => {
                             /> */}
                             <Image
                                 alt=""
-                                className="md:object-contain md:max-w-[400px] md:max-h-[250px] lg:object-contain lg:max-w-[300px] lg:max-h-[250px]"
+                                className="md:object-contain  md:max-h-[250px] lg:object-contain lg:max-h-[250px]"
                                 src={`images/${item["poster-image"]}`}
                             />
                             <p
@@ -41,7 +41,7 @@ const Row = ({ data = [], lastElementRef }) => {
                                 src={`images/${item["poster-image"]}`} /> */}
                             <Image
                                 alt=""
-                                className="md:object-contain md:max-w-[400px] md:max-h-[250px] lg:object-contain lg:max-w-[300px] lg:max-h-[250px]"
+                                className="md:object-contain md:max-h-[250px] lg:object-contain lg:max-h-[250px]"
                                 src={`images/${item["poster-image"]}`}
                             />
                             <p
