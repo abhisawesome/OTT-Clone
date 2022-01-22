@@ -34,7 +34,7 @@ jobs:
         name: Checkout
       - name: Install and Build
         uses: actions/setup-node@v2
-      - run: npm run i && npm run build
+      - run: npm i && npm run build
       - run: npm run test -- --watchAll=false
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.2
