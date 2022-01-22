@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/OTT-Clone/static/css/main.6e5fd0a7.css",
-    "main.js": "/OTT-Clone/static/js/main.4f3390b5.js",
-    "static/js/103.27cf22fa.chunk.js": "/OTT-Clone/static/js/103.27cf22fa.chunk.js",
+    "main.css": "/OTT-Clone/static/css/main.92d21861.css",
+    "main.js": "/OTT-Clone/static/js/main.6a51f429.js",
+    "static/js/103.7c3d190e.chunk.js": "/OTT-Clone/static/js/103.7c3d190e.chunk.js",
     "static/js/787.89d07e5c.chunk.js": "/OTT-Clone/static/js/787.89d07e5c.chunk.js",
     "index.html": "/OTT-Clone/index.html",
-    "main.6e5fd0a7.css.map": "/OTT-Clone/static/css/main.6e5fd0a7.css.map",
-    "main.4f3390b5.js.map": "/OTT-Clone/static/js/main.4f3390b5.js.map",
-    "103.27cf22fa.chunk.js.map": "/OTT-Clone/static/js/103.27cf22fa.chunk.js.map",
+    "main.92d21861.css.map": "/OTT-Clone/static/css/main.92d21861.css.map",
+    "main.6a51f429.js.map": "/OTT-Clone/static/js/main.6a51f429.js.map",
+    "103.7c3d190e.chunk.js.map": "/OTT-Clone/static/js/103.7c3d190e.chunk.js.map",
     "787.89d07e5c.chunk.js.map": "/OTT-Clone/static/js/787.89d07e5c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e5fd0a7.css",
-    "static/js/main.4f3390b5.js"
+    "static/css/main.92d21861.css",
+    "static/js/main.6a51f429.js"
   ]
 }
