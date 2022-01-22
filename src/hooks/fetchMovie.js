@@ -32,7 +32,7 @@ const FetchMovie = (pageNumRequest = 1, title) => {
                     })
                 }
                 resolve()
-            }, 0)
+            }, 1000)
         });
     }
     useEffect(() => {

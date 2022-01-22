@@ -5,7 +5,7 @@ const Row = ({ data = [], lastElementRef }) => {
     return (
         <div className="grid sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-x-[30px] gap-y-[90px] mx-[30px] ">
             {data.map((item, index) => {
-                if (data.length === index + 1) {
+                if ((data.length - 10) === index + 1) {
                     return (
                         <div
                             ref={lastElementRef}
