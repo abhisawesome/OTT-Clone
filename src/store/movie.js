@@ -57,9 +57,6 @@ const reducer = (state = initialState, action) => {
                 currentPage = {},
                 movieListFull = {}
             } = state;
-            if( !movieName ||movieName === null ){
-                return state;
-            }
             const currentPageName = currentPage.title
             // const regularExpression = new RegExp(`/^${movieName}/`, 'i');
             // search the movie in data using filter and regex
@@ -70,12 +67,11 @@ const reducer = (state = initialState, action) => {
                         currentMovieList
                         && movieName
                         && movieName.length > 0
-                        &&
-                        currentMovieList.name.toLowerCase().search(movieName.toLowerCase()) !== -1
+                        && currentMovieList.name.toLowerCase().search(movieName.toLowerCase()) !== -1
                     )
             };
             // if the search input value comes empty then reset the data to original
-            if (movieName.length === 0) {
+            if (!movieName || movieName.length === 0) {
                 data = {
                     ...state.data,
                     [currentPageName]: state.movieListFull[currentPageName]
