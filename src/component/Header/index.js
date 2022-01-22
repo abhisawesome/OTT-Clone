@@ -15,7 +15,8 @@ const Header = () => {
         })
     }
     return (
-        <div className='flex flex-row items-center'>
+        //bg-[url('/images/nav_bar.png')]
+        <div className="flex items-center justify-between p-4  w-full bg-black top-0 h-[192] pb-[30px] ">
             <div>
                 <img
                     alt='logo'
@@ -23,17 +24,18 @@ const Header = () => {
                     src="images/Back.png"
                 />
             </div>
-            <div>
-                <img alt='logo'
-                    className='h-5 w-5 pl-100'
-                    src="/images/search.png"
+
+            <div className='flex item-center group' >
+                <img
+                    alt='logo'
+                    className='h-5 w-5 pl-100 block group-hover:hidden'
+                    src="images/search.png"
                 />
 
-            </div>
-            <div >
                 <input
-                    className="text-black"
-                    type="text" placeholder="Search movie.." className='text-black' onChange={(event) => {
+                    className="text-black hidden group-hover:block"
+                    type="text" placeholder="Search movie.."
+                    onChange={(event) => {
                         searchFilim(event.target.value);
                     }}
                 />

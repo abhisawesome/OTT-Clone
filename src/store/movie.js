@@ -48,7 +48,7 @@ const reducer = (state = initialState, action) => {
                 movieListFull = {}
             } = state;
             const currentPageName = currentPage.title
-            const regularExpression = new RegExp(`/^${movieName}/`, 'i');
+            // const regularExpression = new RegExp(`/^${movieName}/`, 'i');
             // search the movie in data using filter and regex
             let data = {
                 ...state.data,

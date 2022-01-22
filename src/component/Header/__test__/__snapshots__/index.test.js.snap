@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header testing Snapshot testing 1`] = `
+<div
+  className="flex flex-row items-center"
+>
+  <div>
+    <img
+      alt="logo"
+      className="h-5 w-5 sm:pl-30"
+      src="images/Back.png"
+    />
+  </div>
+  <div>
+    <img
+      alt="logo"
+      className="h-5 w-5 pl-100"
+      src="/images/search.png"
+    />
+  </div>
+  <div>
+    <input
+      className="text-black"
+      onChange={[Function]}
+      placeholder="Search movie.."
+      type="text"
+    />
+  </div>
+</div>
+`;
