@@ -25,7 +25,7 @@
     "build": "PUBLIC_URL=https://abhisawesome.github.io/OTT-Clone/ craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "predeploy": "npm run build",
+    "predeploy": "CI=false npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
