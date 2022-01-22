@@ -33,8 +33,8 @@ const Header = () => {
                 />
 
                 <input
-                    className="text-black hidden group-hover:block"
-                    type="text" placeholder="Search movie.."
+                    className="text-black hidden rounded group-hover:block"
+                    type="text" placeholder="  Search movie.."
                     onChange={(event) => {
                         searchFilim(event.target.value);
                     }}
