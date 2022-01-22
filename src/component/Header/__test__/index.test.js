@@ -23,7 +23,7 @@ describe('Header testing', () => {
     })
     test('children', () => {
         const tree = renderer.create(<Header />).toJSON();
-        expect(tree.children.length).toBe(3);
+        expect(tree.children.length).toBe(2);
     })
     test('search element in header',()=>{
         const wrapper = shallow(<Header />);

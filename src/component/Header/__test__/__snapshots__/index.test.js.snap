@@ -2,7 +2,7 @@
 
 exports[`Header testing Snapshot testing 1`] = `
 <div
-  className="flex flex-row items-center"
+  className="flex items-center justify-between p-4  w-full bg-black top-0 h-[192] pb-[30px] "
 >
   <div>
     <img
@@ -11,16 +11,16 @@ exports[`Header testing Snapshot testing 1`] = `
       src="images/Back.png"
     />
   </div>
-  <div>
+  <div
+    className="flex item-center group"
+  >
     <img
       alt="logo"
-      className="h-5 w-5 pl-100"
-      src="/images/search.png"
+      className="h-5 w-5 pl-100 block group-hover:hidden"
+      src="images/search.png"
     />
-  </div>
-  <div>
     <input
-      className="text-black"
+      className="text-black hidden group-hover:block"
       onChange={[Function]}
       placeholder="Search movie.."
       type="text"
